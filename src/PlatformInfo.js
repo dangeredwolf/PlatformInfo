@@ -413,3 +413,5 @@ export class PlatformInfo {
 	}
 
 }
+
+window.PlatformInfo = PlatformInfo;
