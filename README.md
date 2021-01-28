@@ -33,4 +33,5 @@ console.log(platform.architecture);
 * When an iPad is spoofing a Mac user agent, it uses a macOS version number. However, when calling `getOSVersion`, it will instead return the Safari version number, which will have the same major version number but may have a differing minor version number.
 * Apple Silicon detection is flaky on Safari (Mac) 14 and later, and can be impeded by browser extensions. It is recommended if you have a download page to continue making both versions available for users.
 * iOS 10 and earlier report architecture as "arm", as there is no way to differentiate between 32 and 64 bit on that platform.
+* Android and Windows Mobile/Phone do not disclose architecture 
 * There is no way to differentiate 32 and 64 bit OS X (macOS). It uses the OS version and browser version to guess if it's x86 or amd64
