@@ -146,7 +146,7 @@ console.log(platform.getOSVersion());
 
 # Boolean `platform.isBrowserVersionHigherThan(String or number version)`
 
-Returns if the OS is higher or equal to the specified value
+Returns if the OS is higher than or equal to the specified value
 
 *Example:*
 ```
@@ -164,7 +164,7 @@ Opposite of above
 
 # Boolean `platform.isOSVersionHigherThan(String or number version)`
 
-Returns if the OS is higher or equal to the specified value
+Returns if the OS is higher than or equal to the specified value
 
 *Example:*
 ```
