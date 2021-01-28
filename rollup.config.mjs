@@ -10,22 +10,39 @@ export default {
 	preserveModules: false,
 	output: [
 		{
-			file: "./dist/PlatformInfo.min.js",
+			file: "./dist/PlatformInfo.js",
+			banner: `/**\n* PlatformInfo ${require('./package.json').version}\n* @license MIT\n* https://github.com/dangeredwolf/PlatformInfo\n**/`,
 			format: "es",
 			sourcemap: true,
 			hoistTransitiveImports: true
 		},
 		{
-			file: "./dist/PlatformInfoStandalone.min.js",
+			file: "./dist/PlatformInfo.min.js",
+			banner: `/**\n* PlatformInfo ${require('./package.json').version}\n* @license MIT\n* https://github.com/dangeredwolf/PlatformInfo\n**/`,
+			format: "es",
+			sourcemap: true,
+			hoistTransitiveImports: true,
+			plugins: [terser({mangle:true})]
+		},
+		{
+			file: "./dist/PlatformInfoStandalone.js",
+			banner: `/**\n* PlatformInfo ${require('./package.json').version}\n* @license MIT\n* https://github.com/dangeredwolf/PlatformInfo\n**/`,
 			format: "iife",
 			sourcemap: true,
 			hoistTransitiveImports: true
+		},
+		{
+			file: "./dist/PlatformInfoStandalone.min.js",
+			banner: `/**\n* PlatformInfo ${require('./package.json').version}\n* @license MIT\n* https://github.com/dangeredwolf/PlatformInfo\n**/`,
+			format: "iife",
+			sourcemap: true,
+			hoistTransitiveImports: true,
+			plugins: [terser({mangle:true})]
 		}
 	],
 	plugins: [
 		resolve(),
 		babel({configFile:"./babel.config.json"}),
-		resolve(),
-		terser({mangle:true})
+		resolve()
 	]
 };
