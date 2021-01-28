@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Platform Info</title>
+		<style>
+			html {
+				font-family:-apple-system-ui, Segoe UI, Roboto, sans-serif;
+			}
+
+			.good {
+				color:green;
+				font-weight:700;
+			}
+
+			.bad {
+				color:red;
+				font-weight:700;
+			}
+
+			.hidden {
+				display:none;
+			}
+
+			canvas {
+				height:1px;
+				width:1px;
+				opacity:0.01;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			a:hover, a:focus {
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Platform Info</h1>
+		<b>User agent:</b> <span class="ua"></span> <br>
+		<b>Platform:</b> <span class="platform"></span> <br>
+		<b>OS Version:</b> <span class="osversion"></span> <br>
+		<b>OS Version (number):</b> <span class="osversionnum"></span> <br>
+		<b>Browser Version:</b> <span class="browserversion"></span> <br>
+		<b>Browser Version (number):</b> <span class="browserversionnum"></span> <br>
+		<b>Architecture:</b> <span class="architecture"></span> <br>
+
+		<noscript>
+			Sorry, JavaScript is required for this webpage.
+		</noscript>
+		<!--script src="/nquery.min.js"></script-->
+		<script src="jquery-1.12.4.min.js"
+				integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="></script>
+		<script src="PlatformInfoTest.js" type="module"></script>
+	</body>
+</html>
