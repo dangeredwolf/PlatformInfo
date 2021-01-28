@@ -25,8 +25,11 @@ console.log(platform.architecture);
 // ---> amd64
 ```
 
+# [How to use it](https://github.com/dangeredwolf/PlatformInfo/blob/master/docs/api.md)
+### [How to build it yourself](https://github.com/dangeredwolf/PlatformInfo/blob/master/docs/build.md)
+
 ## Limitations
 * Does not work on browsers that don't support ECMAScript 5. This includes browsers like Internet Explorer 8 and really old versions of current browsers. Internet Explorer 11 does work, however. 
-* Apple Silicon detection is flaky on Safari (Mac) 14 and later
+* Apple Silicon detection is flaky on Safari (Mac) 14 and later, and can be impeded by browser extensions. It is recommended if you have a download page to continue making both versions available for users.
 * iOS 10 and earlier report architecture as "arm", as there is no way to differentiate between 32 and 64 bit on that platform.
 * There is no way to differentiate 32 and 64 bit OS X (macOS). It uses the OS version and browser version to guess if it's x86 or amd64
