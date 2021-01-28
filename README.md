@@ -1,5 +1,5 @@
 # PlatformInfo
-A simple, powerful library for comparing users' browsers and devices
+A simple, powerful library for comparing users' browsers and devices. It's small, taking up about 5 kb *before* gzip.
 
 ## It does things you would expect 
 * OS type
