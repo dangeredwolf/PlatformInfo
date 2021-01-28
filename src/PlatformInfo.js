@@ -49,6 +49,10 @@ export class PlatformInfo {
 			return "mac";
 		}
 
+		if (userAgent.match("CrOS")) {
+			return "chromeos";
+		}
+
 		if (userAgent.match("Linux")) {
 			return "linux"
 		}
@@ -88,13 +92,13 @@ export class PlatformInfo {
 				}
 				return null;
 			case "mac":
-				matcher = userAgent.match(/Mac OS X [\d\.\_]+/); // Limited to XX.YY for number values
+				matcher = userAgent.match(/Mac OS X [\d\.\_]+/);
 				if (matcher) {
 					return matcher[0].replace(/\_/g, ".").match(/[\d\.]+/)[0]
 				}
 				return null;
 			case "ios":
-				matcher = userAgent.match(/(iPhone|CPU) OS [\d\.\_]+/); // Limited to XX.YY for number values
+				matcher = userAgent.match(/(iPhone|CPU) OS [\d\.\_]+/);
 				if (matcher) {
 					return matcher[0].replace(/\_/g, ".").match(/[\d\.]+/)[0]
 				} else { // For iPadOS we don't know the exact iOS version, but the Safari version corresponds approximately with it in later versions
@@ -105,13 +109,19 @@ export class PlatformInfo {
 					return null;
 				}
 			case "android":
-				matcher = userAgent.match(/Android [\d\.]+/); // Limited to XX.YY for number values
+				matcher = userAgent.match(/Android [\d\.]+/);
 				if (matcher) {
 					return matcher[0].match(/[\d\.]+/)[0]
 				}
 				return null;
 			case "linux": // Linux doesn't often have a version number in the user agent, but some do ...
-				matcher = userAgent.match(/Linux [\d\.]+/); // Limited to XX.YY for number values
+				matcher = userAgent.match(/Linux [\d\.]+/);
+				if (matcher) {
+					return matcher[0].match(/[\d\.]+/)[0]
+				}
+				return null;
+			case "chromeos": // ChromeOS uses same string as browser
+				matcher = userAgent.match(/Chrome\/[\d\.]+/);
 				if (matcher) {
 					return matcher[0].match(/[\d\.]+/)[0]
 				}

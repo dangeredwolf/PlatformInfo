@@ -1,6 +1,3 @@
-import { PlatformInfo } from "./platformDetector.js";
-window.PlatformInfo = PlatformInfo; // for debug
-
 let platform = new PlatformInfo;
 
 $(".ua").text(navigator.userAgent);
