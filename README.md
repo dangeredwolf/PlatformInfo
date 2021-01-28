@@ -14,7 +14,7 @@ A simple, powerful library for comparing users' browsers and devices
 * Manually specifying a user agent to use instead of fetching the user's
 
 ## How to use it?
-You can use `PlatformInfoStandalone.js` as a standlone JavaScript file, or `PlatformInfo.js` to integrate it as an ES module with build systems like Webpack and Rollup.
+You can use `PlatformInfoStandalone.js` as a standalone JavaScript file, or `PlatformInfo.js` to integrate it as an ES module with build systems like Webpack and Rollup.
 
 ```
 import { PlatformInfo } from "PlatformInfo.js";
