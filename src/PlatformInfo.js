@@ -130,7 +130,8 @@ export class PlatformInfo {
 	}
 
 	getOSVersionNumber() {
-		return parseFloat(this.getOSVersion().match(/\d+(\.\d+)?/))
+		// return parseFloat(this.getOSVersion().match(/\d+(\.\d+)?/));
+		return this.getOSVersion() ? parseFloat(this.getOSVersion().match(/\d+(\.\d+)?/)) : null
 	}
 
 	getBrowser() {
@@ -171,6 +172,8 @@ export class PlatformInfo {
 		if (userAgent.match("KHTML/")) {
 			return "khtml";
 		}
+
+		return null;
 	}
 
 	getBrowserVersion() {
@@ -191,7 +194,7 @@ export class PlatformInfo {
 					return matcher[0].match(/[\d\.]+/)[0]
 				}
 				return null;
-			case "operaPesto":
+			case "operaPresto":
 				matcher = userAgent.match(/Opera\/[\d\.]+/);
 				if (matcher) {
 					return matcher[0].match(/[\d\.]+/)[0]
@@ -308,7 +311,7 @@ export class PlatformInfo {
 		let userAgent = this.userAgent;
 		let matcher;
 
-		if (userAgent.match(/IA64/i)) {
+		if (userAgent.match(/ia\-?64/i)) {
 			return "ia64";
 		}
 
@@ -420,7 +423,11 @@ export class PlatformInfo {
 				return "arm64"
 
 		}
+		
+		return null;
 	}
+
+
 
 }
 

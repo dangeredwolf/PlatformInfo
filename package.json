@@ -1,6 +1,6 @@
 {
 	"name": "PlatformInfo",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A modern library to detect OSes and architectures.",
 	"copyright": "Copyright 2021 dangered wolf",
 	"main": "index.js",
