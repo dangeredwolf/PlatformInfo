@@ -3,7 +3,8 @@
 	"version": "1.0.1",
 	"description": "A modern library to detect OSes and architectures.",
 	"copyright": "Copyright 2021 dangered wolf",
-	"main": "index.js",
+	"main": "./src/PlatformInfo.js",
+	"types": "./src/PlatformInfo.d.ts",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/dangeredwolf/PlatformInfo/issues"
