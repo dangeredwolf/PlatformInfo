@@ -1,10 +1,11 @@
 {
 	"name": "PlatformInfo",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "A modern library to detect OSes and architectures.",
 	"copyright": "Copyright 2021 dangered wolf",
 	"main": "./src/PlatformInfo.js",
 	"types": "./src/PlatformInfo.d.ts",
+	"type":"module",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/dangeredwolf/PlatformInfo/issues"
@@ -12,7 +13,7 @@
 	"author": "dangered wolf",
 	"scripts": {
 		"start": "./node_modules/.bin/babel PlatformInfo.js --out-dir out --presets=@babel/env",
-		"rollup": "rollup -c rollup.config.mjs"
+		"rollup": "rollup -c rollup.config.js"
 	},
 	"repository": "https://github.com/dangeredwolf/PlatformInfo",
 	"devDependencies": {

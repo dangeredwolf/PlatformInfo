@@ -2,8 +2,8 @@ import resolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
 import { terser } from "rollup-plugin-terser";
 
-const fs = require("fs");
-const path = require("path");
+import "fs";
+import "path";
 
 export default {
 	input: "./src/PlatformInfo.js",

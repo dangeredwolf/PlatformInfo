@@ -342,9 +342,7 @@ export class PlatformInfo {
 		switch(this.getOSPlatform()) {
 			case "mac":
 
-				//
-
-				if (this.isOSVersionHigherThan("11")) {
+				if (this.isOSVersionHigherThan("10.15")) {
 					var webglContext = document.createElement("canvas").getContext ? document.createElement("canvas").getContext("webgl") || document.createElement("canvas").getContext("experimental-webgl") : null;
 
 					// WebGL is just... not available. So, we have to assume Intel.
@@ -352,7 +350,7 @@ export class PlatformInfo {
 					if (webglContext === null) {
 						return "amd64"
 					}
-					var debugInfo = webglContext.getExtension('WEBGL_debug_renderer_info');
+					var debugInfo = webglContext.getExtension("WEBGL_debug_renderer_info");
 					var gpu = debugInfo && webglContext.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) || "";
 
 					if (gpu.match(/Apple/) && (!gpu.match(/Apple GPU/) && gpu !== "")) {
@@ -426,8 +424,6 @@ export class PlatformInfo {
 		
 		return null;
 	}
-
-
 
 }
 
